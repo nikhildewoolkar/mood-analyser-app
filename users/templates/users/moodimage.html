@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color: lightskyblue">
+  {% block content %}
+
+  <center>
+<form action="{% url 'main123' %}">
+    <div style="margin-top: 270px;">
+  <input id="picname" type="file" name="pic" accept="image/*">
+   
+  <button type="submit">Check mood</button>
+
+  
+</div>
+</form>
+
+</center>
+{% endblock content %}
+
+
+</body>
+</html>

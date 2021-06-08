@@ -1,0 +1,31 @@
+<html>
+    <head>
+            <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    </head>
+    <body>
+<?php
+if($_FILES['file']['size']>0){
+    if(!($_FILES['file']['size']>153600){
+        if(move_uploaded_file($_FILES['file']['tmp_name'],"images/".$_FILES['file']['name'])){
+            #file uploaded
+            $filename = $_FILES['file']['name'];
+            echo ($filename)
+            ?>
+            <script type="text/javascript">
+            parent.document.getElementById("message").innerHTML="";
+            parent.document.getElementById("file").value="";
+            window.parent.updatepicture("<?php echo 'images/'.$_FILES['file']['name']; ?>");
+            
+            </script>
+            <?php
+        }else{
+          #the upload failed
+        }
+    }else{
+        #the file is too big
+    }
+}
+
+?>
+</body>
+</html>

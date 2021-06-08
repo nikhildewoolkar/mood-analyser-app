@@ -1,0 +1,31 @@
+{% load static %}
+<html>
+    <head>
+        <title>action page</title>
+    </head>
+    <body>
+        yessssssssss
+        <p>Click the button to display the URL of the document.</p>
+
+        <button onclick="myFunction()">Try it</button>
+        <form action="{% url 'main123' %}">
+            Image : <img src="{{img}}" alt="Alps"> 
+        <button type="submit">See mood</button>
+        <p id="demo"></p>
+        <script>
+                function myFunction() {
+                  var x = document.URL;
+                  document.getElementById("demo").innerHTML = x.substring(x.indexOf("=")+1);
+                  t=x.substring(x.indexOf("=")+1);
+          
+                    var x = document.createElement("IMG");
+                    x.setAttribute("src", t);
+                    x.setAttribute("width", "304");
+                    x.setAttribute("height", "228");
+                    document.body.appendChild(x);
+                }
+              
+        </script>
+        </form>
+    </body>
+</html>

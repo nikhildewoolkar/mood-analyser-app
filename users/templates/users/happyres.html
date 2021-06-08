@@ -1,0 +1,68 @@
+{% block content %}
+<style>
+
+
+#elems1,#elems2,#elems3{
+    width:30%; 
+    float: left;
+    margin-right: 15px;
+    margin-left: 20px;
+    margin-top: 10px;
+    padding-bottom: 20px;
+
+}
+
+#back{
+    background-color: deeppink;
+    width: 30px;
+    height: 30px;
+}
+</style>
+ <title>Home Page</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  
+  <div >
+    {% load static %}
+    
+      
+    <div id="elems1" class="w3-card-8" >
+        
+        <img src="{% static 'images/happyimg2.jpeg' %}" alt="Alps" style="width:100%; height:50%">
+    
+    </div>
+    <div id="elems2" class="w3-card-8" >
+        <img src="{% static 'images/happyimg3.jpeg' %}" alt="Alps" style="width:100%; height:50%">
+       
+    </div>
+    <div id="elems3" class="w3-card-8" >
+        
+        <img src="{% static 'images/happyimg4.jpeg' %}" alt="Alps" style="width:100%; height:50%">
+     
+    </div>
+        
+</div>
+
+  
+<div >
+    {% load static %}
+    
+      
+    <div id="elems1" class="w3-card-8" >
+        
+        <img src="{% static 'images/happyimage5.jpeg' %}" alt="Alps" style="width:100%; height:50%">
+    
+    </div>
+    <div id="elems2" class="w3-card-8" >
+        <img src="{% static 'images/happyimage6.png' %}" alt="Alps" style="width:100%; height:50%">
+       
+    </div>
+    <div id="elems3" class="w3-card-8" >
+        
+        <img src="{% static 'images/happyimg6.png' %}" alt="Alps" style="width:100%; height:50%">
+     
+    </div>
+        
+</div>
+{% endblock content %}
